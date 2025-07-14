@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: ['schoolbustracker-1-vpy9.onrender.com'], // <-- Add this line
   },
   build: {
     outDir: "dist/spa",
