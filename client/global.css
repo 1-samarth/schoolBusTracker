@@ -120,5 +120,26 @@
 
   body {
     @apply bg-background text-foreground;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+
+  /* Mobile-first optimizations */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Better touch targets for mobile */
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"] {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Improved focus states for mobile */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
   }
 }
